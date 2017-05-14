@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="root_container"
+>
+  <h1>
+    monzter
+  </h1>
+  <div
+    className="component_Login"
+  >
+    <div>
+      Hey!
+    </div>
+  </div>
+</div>
+`;
