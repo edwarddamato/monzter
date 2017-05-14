@@ -1,0 +1,7 @@
+{
+  "Monzo": {
+    "ClientId": "oauthclient_00009KOvM6lgcXH4cZU8G1",
+    "ApiUrl": "https://api.monzo.com",
+    "OAuthUrl": "https://auth.getmondo.co.uk"
+  }
+}
