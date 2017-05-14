@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "ts-build",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "es6",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "target": "es6",
+        "jsx": "react",
+        "baseUrl": "src"
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "./server"
+    ]
+}
