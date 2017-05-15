@@ -13,11 +13,7 @@ const generateState = (userKey: string): string => {
 export class Api {
   public static GetMonzoLoginUrl(userKey: string, redirectUrl: string): string {
     const monzoConfig = Config.Monzo;
-    const loginUrl = `${monzoConfig.OAuthUrl}/
-      client_id=${monzoConfig.ClientId}&
-      redirect_url=${redirectUrl}&
-      response_type=code&
-      state=${generateState(userKey)}`;
+    const loginUrl = `${monzoConfig.OAuthUrl}/?client_id=${monzoConfig.ClientId}&redirect_uri=${redirectUrl}&response_type=code&state=${generateState(userKey)}`;
 
     return loginUrl;
   }

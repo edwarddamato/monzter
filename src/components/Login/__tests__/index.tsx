@@ -4,7 +4,7 @@ import { create } from 'react-test-renderer';
 
 it('renders correctly', () => {
   const login = create(
-    <Login />
+    <Login loginUrl='http://someurl' />
   ).toJSON();
   expect(login).toMatchSnapshot();
 });

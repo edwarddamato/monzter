@@ -1,11 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="component_Login"
+<section
+  className="component_login"
 >
-  <div>
-    Hey!
-  </div>
-</div>
+  <img
+    className="component_login-logo"
+    src="test-file-stub"
+  />
+  <a
+    href="http://someurl"
+  >
+    Login to Monzo
+  </a>
+</section>
 `;

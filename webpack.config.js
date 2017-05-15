@@ -21,6 +21,7 @@ module.exports = {
       '.ts',
       '.js',
       '.json',
+      '.svg'
     ]
   },
   module: {
@@ -34,7 +35,8 @@ module.exports = {
           fallback: 'style-loader',
           use: 'css-loader!postcss-loader!sass-loader'
         })
-      }
+      },
+      { test: /\.(png|jpg|gif|svg)$/, loader: 'file-loader?name=img/img-[hash:6].[ext]', include: [SOURCE] }
     ]
   },
   plugins: [HtmlWebpackPluginConfig,

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { IUser } from '../../api/github/interfaces.d';
 import { Login } from '../Login';
+import { Monzter } from '../../api/monzter'
 import './App.scss';
 
 interface IAppState {
-  readonly user?: IUser
+  readonly loginUrl?: string
 }
 
 export class App extends React.Component<undefined, IAppState> {
@@ -12,19 +12,26 @@ export class App extends React.Component<undefined, IAppState> {
     super(props);
 
     this.state = {
-      user: undefined
+      loginUrl: null
     };
   }
 
+  private async getLoginUrl () {
+    const loginUrl = await Monzter.GetMonzoLoginUrl('edwarddamato');
+    this.setState({ loginUrl });
+  }
+
   componentDidMount () {
+    this.getLoginUrl();
   }
 
   render () {
     return (
       <div className="root_container">
-        <h1>monzter</h1>
         {
-          <Login />
+          this.state.loginUrl
+          ? <Login loginUrl={this.state.loginUrl} />
+          : null
         }
       </div>
     );
