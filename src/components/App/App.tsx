@@ -12,7 +12,7 @@ export class App extends React.Component<undefined, IAppState> {
     super(props);
 
     this.state = {
-      loginUrl: null
+      loginUrl: ''
     };
   }
 
@@ -28,11 +28,7 @@ export class App extends React.Component<undefined, IAppState> {
   render () {
     return (
       <div className="root_container">
-        {
-          this.state.loginUrl
-          ? <Login loginUrl={this.state.loginUrl} />
-          : null
-        }
+        <Login loginUrl={this.state.loginUrl} />
       </div>
     );
   }

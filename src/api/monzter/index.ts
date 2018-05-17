@@ -2,6 +2,11 @@ import { Api } from './api';
 
 export class Monzter {
   public static async GetMonzoLoginUrl(userKey: string): Promise<string> {
-    return await Api.GetMonzoLoginUrl(userKey);
+    try {
+      const loginUrl = await Api.GetMonzoLoginUrl(userKey);
+    } catch (e) {
+      console.error('Cannot get Monzo Login URL!', e);
+      return '';
+    }
   }
 }

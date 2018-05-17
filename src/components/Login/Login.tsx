@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './Login.scss';
+import '../../styles/buttons.scss';
 import logo from '../../img/logo.svg';
 
 export interface ILoginProps { loggedIn?: boolean; loginUrl: string }
@@ -19,7 +20,7 @@ export class Login extends React.Component<ILoginProps, ILoginState> {
     return (
       <section className="component_login">
         <img className="component_login-logo" src={logo} />
-        <a href={this.props.loginUrl}>Login to Monzo</a>
+        <a className="button button--primary component_login-button" href={this.props.loginUrl}>Login to Monzo</a>
       </section>
     );
   }

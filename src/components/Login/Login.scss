@@ -8,6 +8,13 @@
     transform: translate(-50%, -50%);
     width: 600px;
     height: 400px;
-    background-color: $alt-color;
+    // background-color: $alt-color;
+
+    &-logo {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
